@@ -18,16 +18,12 @@ include "templates/header.php";
 
 <?php
 // Renderizando os Todos já existentes na página
-$sql = "SELECT * FROM todos";
+$sql = "SELECT * FROM todos ORDER BY id DESC";  // exibir os todos em ordem inversa de  criação (do mais novo, pro mais velho)
 $stmt = $pdo->query($sql)->fetchAll();
-$stmt = array_reverse($stmt);  // invertendo a ordem da array para exibir os todos do mais novo pro mais velho
 
 if (count($stmt) > 0) {
   echo "<ul>";
   foreach ($stmt as $todo) {
-    // echo '<li>' . $todo['todo'] . '</li>';
-    // echo '<a href="excluir.php?id=' . $todo['id'] . '">Excluir</a> / ';
-    // echo '<a href="editar.php?id=' . $todo['id'] . '">Editar</a>';
     echo '<li>';
     echo '<div class="task">';
     echo $todo['todo'];
