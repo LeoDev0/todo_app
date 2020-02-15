@@ -25,13 +25,13 @@ if (count($stmt) > 0) {
   echo "<ul>";
   foreach ($stmt as $todo) {
     echo '<li>';
-    echo '<div class="task">';
-    echo $todo['todo'];
-    echo '</div>';
-    echo '<div class="actions">';
-    echo '<a class="btn delete" href="excluir.php?id=' . $todo['id'] . '"> <i class="far fa-trash-alt"></i> </a>  ';
-    echo '<a class="btn edit" href="editar.php?id=' . $todo['id'] . '"> <i class="far fa-edit"></i> </a>';
-    echo '</div>';
+      echo '<div class="task">';
+        echo $todo['todo'];
+      echo '</div>';
+      echo '<div class="actions">';
+        echo '<a class="btn delete" href="excluir.php?id=' . $todo['id'] . '"> <i class="far fa-trash-alt"></i> </a>  ';
+        echo '<a class="btn edit" href="editar.php?id=' . $todo['id'] . '"> <i class="far fa-edit"></i> </a>';
+      echo '</div>';
     echo '</li>';
     echo '<br />';
     echo '<br />';
